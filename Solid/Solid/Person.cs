@@ -3,7 +3,6 @@ using System.Collections.Generic;
 
 namespace Solid
 {
-
     public abstract class Person
     {
         public string Name { get; set; }
