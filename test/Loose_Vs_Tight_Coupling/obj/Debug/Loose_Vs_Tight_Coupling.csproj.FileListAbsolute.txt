@@ -1,7 +1,0 @@
-C:\Users\rbygs\source\repos\test\Loose_Vs_Tight_Coupling\bin\Debug\Loose_Vs_Tight_Coupling.exe.config
-C:\Users\rbygs\source\repos\test\Loose_Vs_Tight_Coupling\bin\Debug\Loose_Vs_Tight_Coupling.exe
-C:\Users\rbygs\source\repos\test\Loose_Vs_Tight_Coupling\bin\Debug\Loose_Vs_Tight_Coupling.pdb
-C:\Users\rbygs\source\repos\test\Loose_Vs_Tight_Coupling\obj\Debug\Loose_Vs_Tight_Coupling.csproj.AssemblyReference.cache
-C:\Users\rbygs\source\repos\test\Loose_Vs_Tight_Coupling\obj\Debug\Loose_Vs_Tight_Coupling.csproj.CoreCompileInputs.cache
-C:\Users\rbygs\source\repos\test\Loose_Vs_Tight_Coupling\obj\Debug\Loose_Vs_Tight_Coupling.exe
-C:\Users\rbygs\source\repos\test\Loose_Vs_Tight_Coupling\obj\Debug\Loose_Vs_Tight_Coupling.pdb

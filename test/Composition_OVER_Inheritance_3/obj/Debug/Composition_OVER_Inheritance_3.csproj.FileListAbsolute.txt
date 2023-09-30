@@ -1,7 +1,0 @@
-C:\Users\rbygs\source\repos\test\Composition_OVER_Inheritance_3\bin\Debug\Composition_OVER_Inheritance_3.exe.config
-C:\Users\rbygs\source\repos\test\Composition_OVER_Inheritance_3\bin\Debug\Composition_OVER_Inheritance_3.exe
-C:\Users\rbygs\source\repos\test\Composition_OVER_Inheritance_3\bin\Debug\Composition_OVER_Inheritance_3.pdb
-C:\Users\rbygs\source\repos\test\Composition_OVER_Inheritance_3\obj\Debug\Composition_OVER_Inheritance_3.csproj.AssemblyReference.cache
-C:\Users\rbygs\source\repos\test\Composition_OVER_Inheritance_3\obj\Debug\Composition_OVER_Inheritance_3.csproj.CoreCompileInputs.cache
-C:\Users\rbygs\source\repos\test\Composition_OVER_Inheritance_3\obj\Debug\Composition_OVER_Inheritance_3.exe
-C:\Users\rbygs\source\repos\test\Composition_OVER_Inheritance_3\obj\Debug\Composition_OVER_Inheritance_3.pdb
