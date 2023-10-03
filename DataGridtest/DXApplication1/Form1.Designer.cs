@@ -268,9 +268,9 @@
             // 
             // simpleButton1
             // 
-            this.simpleButton1.Location = new System.Drawing.Point(453, 85);
+            this.simpleButton1.Location = new System.Drawing.Point(559, 80);
             this.simpleButton1.Name = "simpleButton1";
-            this.simpleButton1.Size = new System.Drawing.Size(100, 38);
+            this.simpleButton1.Size = new System.Drawing.Size(96, 35);
             this.simpleButton1.TabIndex = 11;
             this.simpleButton1.Text = "counter";
             this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click);
