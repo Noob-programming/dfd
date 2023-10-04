@@ -76,7 +76,7 @@ namespace Itemds.Logic.Services
 					//execute method that contain parameter
 					action.Invoke();
 					connection.Open();
-					
+
 					adapter = new SqlDataAdapter(Command);
 					adapter.Fill(dt);
 					adapter.Dispose();
@@ -86,7 +86,7 @@ namespace Itemds.Logic.Services
 				}
 				catch (Exception e)
 				{
-					
+
 					MessageBox.Show($@"{e}");
 
 				}

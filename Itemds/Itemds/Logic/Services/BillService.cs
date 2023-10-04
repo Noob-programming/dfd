@@ -42,8 +42,7 @@ namespace Itemds.Logic.Services
 		static void setparameterbill(string f, SqlCommand command)
 		{
 			command.Parameters.Add("@chicker",
-					SqlDbType.NVarChar).Value
-				= f;
+					SqlDbType.NVarChar).Value = f;
 		}
 
 		public static DataTable GetBills()
@@ -51,9 +50,24 @@ namespace Itemds.Logic.Services
 			return DbHelper.GetData("TB_Bill_Get", () => { });
 		}
 
-		public static object GetFirstBill()
+		private static void ParameterBetweenFirstLast(string status, SqlCommand command)
 		{
-			return DbHelper.GetData("TB_Bill_Get1", () => setparameterbill("first", DbHelper.Command));
+
+			command.Parameters.Add("@status",
+					SqlDbType.VarChar).Value
+				= status;
+
+		}
+
+		public static DataTable GetBillByIndex(string status)
+		{
+			return DbHelper.GetData("TB_Bill_Get_FirstLastBetween",
+				() => ParameterBetweenFirstLast(status, DbHelper.Command));
+		}
+
+		public static DataTable GetBillType()
+		{
+			return DbHelper.GetData("TB_Bill_Get_BillType", (() => { }));
 		}
 	}
 }

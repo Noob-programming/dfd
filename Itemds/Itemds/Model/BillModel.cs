@@ -10,5 +10,9 @@ namespace Itemds.Model
 		public DateTime? BillDate { get; set; }
 		public string Notes { get; set; }
 		public object Dgv { get; set; }
+		object CbxBill { get; set; }
+		string BillDisplayMember { get; set; }
+		bool BillValueMember { get; set; }
+
 	}
 }

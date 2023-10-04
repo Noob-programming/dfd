@@ -18,5 +18,8 @@ namespace Itemds.View.Interfaces
 		DateTime? BillDate { get; set; }
 		string Notes { get; set; }
 		object Dgv { get; set; }
+		object CbxBill { get; set; }
+		string BillDisplayMember { get; set; }
+		bool BillValueMember { get; set; }
 	}
 }

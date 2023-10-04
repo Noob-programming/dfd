@@ -67,6 +67,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>BillsDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Logic\DataTableChage\BillTable.cs" />
     <Compile Include="Logic\Presnter\BillPresenter.cs" />
     <Compile Include="Logic\Presnter\ItemPresenter.cs" />
     <Compile Include="Logic\Services\BillService.cs" />
@@ -96,6 +97,12 @@
     </Compile>
     <Compile Include="View\Interfaces\IBill.cs" />
     <Compile Include="View\Interfaces\IItems.cs" />
+    <Compile Include="XtraForm1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="XtraForm1.Designer.cs">
+      <DependentUpon>XtraForm1.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -114,6 +121,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\Forms\Frm_Main.resx">
       <DependentUpon>Frm_Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XtraForm1.resx">
+      <DependentUpon>XtraForm1.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="App.config" />
     <None Include="BillsDataSet.xsc">
