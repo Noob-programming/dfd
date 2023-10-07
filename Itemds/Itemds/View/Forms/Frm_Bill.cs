@@ -1,8 +1,8 @@
-﻿using Itemds.Logic.Presnter;
+﻿using DevExpress.XtraEditors;
+using Itemds.Logic.Presnter;
 using Itemds.View.Interfaces;
 using System;
 using System.Windows.Forms;
-using DevExpress.XtraEditors;
 
 namespace Itemds.View.Forms
 {
@@ -67,19 +67,26 @@ namespace Itemds.View.Forms
 		public string Notes { get => txtNotes.Text; set => txtNotes.Text = value.ToString(); }
 
 		/// <inheritdoc />
-		public object Dgv { get => gcBill.DataSource; set => gcBill.DataSource = value; }
+		public object Dgv
+		{
+			get => gcBill.DataSource;
+			set => gcBill.DataSource = value;
+		}
 
 		/// <inheritdoc />
-		public object CbxBill { get=>cbtype.SelectedText; set=>cbtype = (LookUpEdit)value; }
+		public object CbxBill { get => cbtype.SelectedText; set => cbtype = (LookUpEdit)value; }
 
 		/// <inheritdoc />
-		public string BillDisplayMember { get=>cbtype.Properties.DisplayMember = "BillType"; set
-			=> cbtype.Properties.DataSource = value; }
+		public string BillDisplayMember
+		{
+			get => cbtype.Properties.DisplayMember = "BillType"; set
+			=> cbtype.Properties.DataSource = value;
+		}
 
 		/// <inheritdoc />
 		public bool BillValueMember { get; set; }
 
-	
+
 		private void Frm_Bill_Load(object sender, EventArgs e)
 		{
 			_presenter.GetAll();
@@ -103,6 +110,11 @@ namespace Itemds.View.Forms
 		private void LastOne_Click(object sender, EventArgs e)
 		{
 			_presenter.getLastRow();
+		}
+
+		private void gcBill_Click(object sender, EventArgs e)
+		{
+
 		}
 	}
 }

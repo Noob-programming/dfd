@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<Database Name="Bills" Class="StockStutsDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+	<Connection Mode="AppSettings"
+	            ConnectionString="Data Source=DESKTOP-LPLR64V\NEWSQL;Initial Catalog=Bills;Integrated Security=True"
+	            SettingsObjectName="StockMarcte.Properties.Settings" SettingsPropertyName="BillsConnectionString"
+	            Provider="System.Data.SqlClient" />
+	<Table Name="dbo.TB_StockItem" Member="TB_StockItems">
+		<Type Name="TB_StockItem">
+			<Column Name="itemGuid" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+			<Column Name="status" Type="System.String" DbType="NVarChar(10) NOT NULL" CanBeNull="false" />
+			<Column Name="Quintity" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+			<Association Name="TB_Item_TB_StockItem" Member="TB_Item" ThisKey="itemGuid" OtherKey="itemGuid" Type="TB_Item"
+			             IsForeignKey="true" />
+		</Type>
+	</Table>
+	<Table Name="dbo.TB_Item" Member="TB_Items">
+		<Type Name="TB_Item">
+			<Column Name="itemGuid" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+			<Column Name="itemcode" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+			<Column Name="itemName" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+			<Column Name="itemPrice" Type="System.Decimal" DbType="Decimal(10,2)" CanBeNull="true" />
+			<Column Name="itemPriceSingle" Type="System.Decimal" DbType="Decimal(10,2)" CanBeNull="true" />
+			<Column Name="itemPriceMany" Type="System.Decimal" DbType="Decimal(10,2)" CanBeNull="true" />
+			<Column Name="parentGuid" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+			<Column Name="ISGroup" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+			<Column Name="DateOfInsert" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+			<Association Name="TB_Item_TB_StockItem" Member="TB_StockItems" ThisKey="itemGuid" OtherKey="itemGuid"
+			             Type="TB_StockItem" />
+			<Association Name="TB_Item_TB_Billitem" Member="TB_Billitems" ThisKey="itemGuid" OtherKey="itemGuid"
+			             Type="TB_Billitem" />
+		</Type>
+	</Table>
+	<Table Name="dbo.View_Stock_Item" Member="View_Stock_Items">
+		<Type Name="View_Stock_Item">
+			<Column Name="itemName" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+			<Column Name="status" Type="System.String" DbType="NVarChar(10) NOT NULL" CanBeNull="false" />
+		</Type>
+	</Table>
+	<Table Name="dbo.TB_Bill" Member="TB_Bills">
+		<Type Name="TB_Bill">
+			<Column Name="BillGuid" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+			<Column Name="Billcode" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+			<Column Name="BillDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+			<Column Name="Notes" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+			<Column Name="BillType" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+			<Association Name="TB_Bill_TB_Billitem" Member="TB_Billitems" ThisKey="BillGuid" OtherKey="BillGuid"
+			             Type="TB_Billitem" />
+		</Type>
+	</Table>
+	<Table Name="dbo.TB_Billitems" Member="TB_Billitems">
+		<Type Name="TB_Billitem">
+			<Column Name="BillitemGuid" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true"
+			        CanBeNull="false" />
+			<Column Name="BillitemID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+			<Column Name="BillGuid" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+			<Column Name="itemGuid" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+			<Column Name="Quantity" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+			<Column Name="Price" Type="System.Decimal" DbType="Decimal(10,2) NOT NULL" CanBeNull="false" />
+			<Column Name="Total" Type="System.Decimal" DbType="Decimal(10,2) NOT NULL" CanBeNull="false" />
+			<Association Name="TB_Bill_TB_Billitem" Member="TB_Bill" ThisKey="BillGuid" OtherKey="BillGuid" Type="TB_Bill"
+			             IsForeignKey="true" DeleteRule="CASCADE" />
+			<Association Name="TB_Item_TB_Billitem" Member="TB_Item" ThisKey="itemGuid" OtherKey="itemGuid" Type="TB_Item"
+			             IsForeignKey="true" DeleteRule="CASCADE" />
+		</Type>
+	</Table>
+</Database>

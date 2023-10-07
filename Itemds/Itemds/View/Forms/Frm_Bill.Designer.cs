@@ -32,6 +32,7 @@
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_Bill));
 			this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
 			this.panelControl3 = new DevExpress.XtraEditors.PanelControl();
+			this.cbtype = new DevExpress.XtraEditors.LookUpEdit();
 			this.txtguid = new DevExpress.XtraEditors.TextEdit();
 			this.dtpicer = new DevExpress.XtraEditors.DateEdit();
 			this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
@@ -66,11 +67,11 @@
 			this.tB_BillTableAdapter = new Itemds.BillsDataSetTableAdapters.TB_BillTableAdapter();
 			this.fKBillitemsBillBindingSource = new System.Windows.Forms.BindingSource(this.components);
 			this.tB_BillitemsTableAdapter = new Itemds.BillsDataSetTableAdapters.TB_BillitemsTableAdapter();
-			this.cbtype = new DevExpress.XtraEditors.LookUpEdit();
 			((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
 			this.panelControl1.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.panelControl3)).BeginInit();
 			this.panelControl3.SuspendLayout();
+			((System.ComponentModel.ISupportInitialize)(this.cbtype.Properties)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.txtguid.Properties)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.dtpicer.Properties)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.dtpicer.Properties.CalendarTimeProperties)).BeginInit();
@@ -91,7 +92,6 @@
 			((System.ComponentModel.ISupportInitialize)(this.tBBillBindingSource)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.behaviorManager1)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.fKBillitemsBillBindingSource)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.cbtype.Properties)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// panelControl1
@@ -120,6 +120,17 @@
 			this.panelControl3.Name = "panelControl3";
 			this.panelControl3.Size = new System.Drawing.Size(626, 288);
 			this.panelControl3.TabIndex = 1;
+			// 
+			// cbtype
+			// 
+			this.cbtype.Location = new System.Drawing.Point(199, 112);
+			this.cbtype.Name = "cbtype";
+			this.cbtype.Properties.Appearance.Font = new System.Drawing.Font("JetBrains Mono", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.cbtype.Properties.Appearance.Options.UseFont = true;
+			this.cbtype.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+			this.cbtype.Size = new System.Drawing.Size(192, 26);
+			this.cbtype.TabIndex = 32;
 			// 
 			// txtguid
 			// 
@@ -404,6 +415,7 @@
 			this.gcBill.TabIndex = 1;
 			this.gcBill.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvBill});
+			this.gcBill.Click += new System.EventHandler(this.gcBill_Click);
 			// 
 			// tBBillBindingSource1
 			// 
@@ -491,17 +503,6 @@
 			// 
 			this.tB_BillitemsTableAdapter.ClearBeforeFill = true;
 			// 
-			// cbtype
-			// 
-			this.cbtype.Location = new System.Drawing.Point(199, 112);
-			this.cbtype.Name = "cbtype";
-			this.cbtype.Properties.Appearance.Font = new System.Drawing.Font("JetBrains Mono", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.cbtype.Properties.Appearance.Options.UseFont = true;
-			this.cbtype.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-			this.cbtype.Size = new System.Drawing.Size(192, 26);
-			this.cbtype.TabIndex = 32;
-			// 
 			// Frm_Bill
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -517,6 +518,7 @@
 			((System.ComponentModel.ISupportInitialize)(this.panelControl3)).EndInit();
 			this.panelControl3.ResumeLayout(false);
 			this.panelControl3.PerformLayout();
+			((System.ComponentModel.ISupportInitialize)(this.cbtype.Properties)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.txtguid.Properties)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.dtpicer.Properties.CalendarTimeProperties)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.dtpicer.Properties)).EndInit();
@@ -537,7 +539,6 @@
 			((System.ComponentModel.ISupportInitialize)(this.tBBillBindingSource)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.behaviorManager1)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.fKBillitemsBillBindingSource)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.cbtype.Properties)).EndInit();
 			this.ResumeLayout(false);
 
 		}

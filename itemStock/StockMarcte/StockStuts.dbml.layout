@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="StockStuts">
+  <DataContextMoniker Name="/StockStutsDataContext" />
+  <nestedChildShapes>
+    <classShape Id="7bb59bd2-e17a-440e-884b-de2a5a99df57" absoluteBounds="4, 1.25, 2, 1.3862939453125">
+      <DataClassMoniker Name="/StockStutsDataContext/TB_StockItem" />
+      <nestedChildShapes>
+        <elementListCompartment Id="6d0d66ac-3628-42c1-84d1-b2abe1381873" absoluteBounds="4.0150000000000006, 1.71, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="ad934649-093c-4c41-9cd4-95f67210b186" absoluteBounds="1, 1, 2, 2.5401025390625">
+      <DataClassMoniker Name="/StockStutsDataContext/TB_Item" />
+      <nestedChildShapes>
+        <elementListCompartment Id="da043ac6-d426-438c-9b1e-48c19d3664b7" absoluteBounds="1.0150000000000001, 1.46, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(3 : 1.94314697265625); (4 : 1.94314697265625)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/StockStutsDataContext/TB_Item/TB_Item_TB_StockItem" />
+      <nodes>
+        <classShapeMoniker Id="ad934649-093c-4c41-9cd4-95f67210b186" />
+        <classShapeMoniker Id="7bb59bd2-e17a-440e-884b-de2a5a99df57" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="5702b603-aa4d-4a7b-a6aa-37a8eeb6509d" absoluteBounds="7.375, 0.625, 2, 1.1939925130208333">
+      <DataClassMoniker Name="/StockStutsDataContext/View_Stock_Item" />
+      <nestedChildShapes>
+        <elementListCompartment Id="63f97daa-3899-4141-93cf-e2d530702a50" absoluteBounds="7.3900000000000006, 1.085, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="9e5fef71-fc34-4958-9db2-4381b4da5270" absoluteBounds="7.125, 2.75, 2, 1.7708968098958331">
+      <DataClassMoniker Name="/StockStutsDataContext/TB_Bill" />
+      <nestedChildShapes>
+        <elementListCompartment Id="8e8e1af7-f34c-450f-b952-1c6fbb01831a" absoluteBounds="7.1400000000000006, 3.21, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="8ff893fc-8282-41ab-b94f-5b0099f1e0fd" absoluteBounds="4, 5.25, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/StockStutsDataContext/TB_Billitem" />
+      <nestedChildShapes>
+        <elementListCompartment Id="f1fab383-5f26-43ca-b667-c0b47f1caa9e" absoluteBounds="4.0150000000000006, 5.71, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(8.125 : 4.52089680989583); (8.125 : 6.32774983723958); (6 : 6.32774983723958)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/StockStutsDataContext/TB_Bill/TB_Bill_TB_Billitem" />
+      <nodes>
+        <classShapeMoniker Id="9e5fef71-fc34-4958-9db2-4381b4da5270" />
+        <classShapeMoniker Id="8ff893fc-8282-41ab-b94f-5b0099f1e0fd" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2 : 3.5401025390625); (2 : 6.32774983723958); (4 : 6.32774983723958)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/StockStutsDataContext/TB_Item/TB_Item_TB_Billitem" />
+      <nodes>
+        <classShapeMoniker Id="ad934649-093c-4c41-9cd4-95f67210b186" />
+        <classShapeMoniker Id="8ff893fc-8282-41ab-b94f-5b0099f1e0fd" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

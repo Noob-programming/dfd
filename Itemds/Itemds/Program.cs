@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Windows.Forms;
+using Itemds.View.Forms;
 
 namespace Itemds
 {
@@ -13,7 +14,7 @@ namespace Itemds
 		{
 			Application.EnableVisualStyles();
 			Application.SetCompatibleTextRenderingDefault(false);
-			Application.Run(new XtraForm1());
+			Application.Run(new Frm_Bill());
 		}
 	}
 }
