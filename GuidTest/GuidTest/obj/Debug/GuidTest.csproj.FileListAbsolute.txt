@@ -1,0 +1,7 @@
+C:\Users\rbygs\source\repos\GuidTest\GuidTest\bin\Debug\GuidTest.exe.config
+C:\Users\rbygs\source\repos\GuidTest\GuidTest\bin\Debug\GuidTest.exe
+C:\Users\rbygs\source\repos\GuidTest\GuidTest\bin\Debug\GuidTest.pdb
+C:\Users\rbygs\source\repos\GuidTest\GuidTest\obj\Debug\GuidTest.csproj.AssemblyReference.cache
+C:\Users\rbygs\source\repos\GuidTest\GuidTest\obj\Debug\GuidTest.csproj.CoreCompileInputs.cache
+C:\Users\rbygs\source\repos\GuidTest\GuidTest\obj\Debug\GuidTest.exe
+C:\Users\rbygs\source\repos\GuidTest\GuidTest\obj\Debug\GuidTest.pdb
