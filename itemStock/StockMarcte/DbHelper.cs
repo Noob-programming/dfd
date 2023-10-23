@@ -8,7 +8,6 @@ namespace StockMarcte
 	internal static class DbHelper
 	{
 		public static SqlCommand cmd;
-
 		private static SqlConnection getConnection()
 		{
 			try
@@ -27,7 +26,6 @@ namespace StockMarcte
 				throw;
 			}
 		}
-
 		public static bool ExcuteData(string sql, Action action)
 		{
 			using (var conntion = getConnection())
@@ -50,8 +48,6 @@ namespace StockMarcte
 				}
 			}
 		}
-
-
 		public static DataTable GetData(string sql)
 		{
 			var dt = new DataTable();
@@ -78,7 +74,6 @@ namespace StockMarcte
 
 			return null;
 		}
-
 		public static bool DeleteData(string sql, Action action)
 		{
 			using (var conntion = getConnection())
@@ -96,7 +91,7 @@ namespace StockMarcte
 				}
 				catch (Exception e)
 				{
-					Console.WriteLine(e);
+					System.Windows.Forms.MessageBox.Show($@"{e}");
 					throw;
 				}
 			}

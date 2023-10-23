@@ -18,13 +18,7 @@ namespace StockMarcte
 			cmd.Parameters.Add("@guid", SqlDbType.UniqueIdentifier).Value = stock.guid;
 		}
 
-		/*
-		 *@guid as uniqueidentifier = 0x0 output,
-		   @billcode as int,
-		   @notes as ntext,
-		   @date  as datetime = null,
-		   @Billtype as bit
-		 */
+
 		public static void parmterBill(Bills bill, SqlCommand command)
 		{
 			command.Parameters.Add("@guid", SqlDbType.UniqueIdentifier)
